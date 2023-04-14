@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './src/Header';
 import Search from './src/Search';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider as DefaultTheme } from 'react-native-paper';
+import HomeHeader from './src/Header/HomeHeader';
 
 const App = () => {
   return (
     <SafeAreaProvider theme={theme}>
-      <Header />
+      <HomeHeader />
       <Search />
     </SafeAreaProvider>
   );

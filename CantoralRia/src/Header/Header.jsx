@@ -2,7 +2,8 @@ import React from 'react';
 import { Appbar } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 
-const Header = () => {
+const HomeHeader = () => {
+
     const goBack = () => console.log('Went back');
     const handleSearch = () => console.log('Searching');
 
@@ -16,6 +17,9 @@ const Header = () => {
 
 };
 
+
+
+
 const headerStyles = StyleSheet.create({
     header: {
         backgroundColor: '#395479',
@@ -25,4 +29,4 @@ const headerStyles = StyleSheet.create({
     }
 });
 
-export default Header;
+export default HomeHeader;
