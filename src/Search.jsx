@@ -1,13 +1,20 @@
 //import react native
 import React from 'react';
-import { StyleSheet, View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { View, ScrollView, TouchableOpacity } from 'react-native';
 import { Searchbar, List } from 'react-native-paper';
+
 
 
 const Search = () => {
     const [searchQuery, setSearchQuery] = React.useState('');
     const onChangeSearch = query => setSearchQuery(query);
     const songItems = Array(10).fill(null);
+
+    const navigation = useNavigation();
+    const handlePress = (itemId) => {
+        navigation.navigate('SongScreen', { itemId });
+    };
 
     return (
         <View style={{ flex: 1 }}>
@@ -24,7 +31,7 @@ const Search = () => {
                             key={`song-id ${index}`}
                             title="Nombre canto"
                             description="Letra de la canción, previsualización de la canción, etc..."
-                            onPress={() => { console.log('Pressed'); }}
+                            onPress={handlePress("hola")}
                             left={props => <List.Icon {...props} icon="music" />}
                             right={props => <List.Icon {...props} icon="chevron-right" />}
                         />

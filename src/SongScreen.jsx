@@ -3,7 +3,9 @@ import React from 'react';
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
 
 
-const Song = () => {
+const SongScreen = ({ itemId }) => {
+
+    console.log(itemId)
     return (
         <View style={{ flex: 1 }}>
             <ScrollView style={{ height: '100%' }}>
@@ -21,4 +23,4 @@ const songStyles = StyleSheet.create({
     }
 });
 
-export default Song;
+export default SongScreen;
