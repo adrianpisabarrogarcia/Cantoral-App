@@ -10,11 +10,11 @@ const Header = ({ homeHeader }) => {
 
     if (homeHeader) {
         return (
-            <Appbar.Header style={HomeHeaderStyles.header}>
-                <View style={HomeHeaderStyles.viewHeader}>
-                    <Image source={require('../assets/cantoral.png')} style={HomeHeaderStyles.image} />
+            <Appbar.Header style={homeHeaderStyles.header}>
+                <View style={homeHeaderStyles.viewHeader}>
+                    <Image source={require('../assets/cantoral.png')} style={homeHeaderStyles.image} />
                     <View style={headerStyles.viewTitle}>
-                        <Appbar.Content title="Cantoral Ria App" titleStyle={HomeHeaderStyles.content} />
+                        <Appbar.Content title="Cantoral Ria App" titleStyle={homeHeaderStyles.content} />
                     </View>
                 </View>
             </Appbar.Header>
@@ -32,7 +32,7 @@ const Header = ({ homeHeader }) => {
 };
 
 
-const HomeHeaderStyles = StyleSheet.create({
+const homeHeaderStyles = StyleSheet.create({
     header: {
         backgroundColor: '#395479',
     },
@@ -53,9 +53,7 @@ const HomeHeaderStyles = StyleSheet.create({
         width: 40,
         height: 40,
     }
-
 });
-
 
 const headerStyles = StyleSheet.create({
     header: {
