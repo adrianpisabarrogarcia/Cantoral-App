@@ -1,7 +1,7 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Appbar } from 'react-native-paper';
 import { StyleSheet, Image, View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 const Header = ({ homeHeader }) => {
     const navigation = useNavigation();
@@ -34,7 +34,6 @@ const Header = ({ homeHeader }) => {
     );
 
 };
-
 
 const homeHeaderStyles = StyleSheet.create({
     header: {

@@ -2,17 +2,14 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './src/HomeScreen';
-import SongScreen from './src/SongScreen';
 import { Provider as DefaultTheme } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
-
+import HomeScreen from './src/HomeScreen';
+import SongScreen from './src/SongScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
-
 
   return (
     <SafeAreaProvider theme={theme}>
@@ -37,6 +34,5 @@ const theme = {
     ...DefaultTheme.fonts
   }
 };
-
 
 export default App;

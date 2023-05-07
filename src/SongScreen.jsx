@@ -1,10 +1,8 @@
 //import react native
 import React from 'react';
-import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import Header from './Header';
-
-
 
 const SongScreen = ({ itemId }) => {
     return (
