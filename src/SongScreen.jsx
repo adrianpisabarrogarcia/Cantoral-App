@@ -3,6 +3,7 @@ import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StyleSheet, Text, ScrollView } from 'react-native';
 import Header from './Header';
+import { ThemeProvider } from 'react-native-paper';
 
 const SongScreen = ({ itemId }) => {
     return (
@@ -47,8 +48,7 @@ const songStyles = StyleSheet.create({
         textDecorationLine: 'underline',
         margin: 10,
         padding: 10,
-        borderRadius: 10,
-        backgroundColor: '#e8e8e6',
+        color: '#395479',
         textAlign: 'center'
     },
     song: {
