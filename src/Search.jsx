@@ -1,19 +1,19 @@
 //import react native
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
 import { View, ScrollView, TouchableOpacity } from 'react-native';
 import { Searchbar, List } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 
 
 
 const Search = () => {
+    const navigation = useNavigation();
     const [searchQuery, setSearchQuery] = React.useState('');
     const onChangeSearch = query => setSearchQuery(query);
     const songItems = Array(10).fill(null);
 
-    const navigation = useNavigation();
-    const handlePress = (itemId) => {
-        navigation.navigate('SongScreen', { itemId });
+    const handlePress = (songId) => () => {
+        navigation.navigate('SongScreen', { songId });
     };
 
     return (

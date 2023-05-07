@@ -1,12 +1,16 @@
 import React from 'react';
 import { Appbar } from 'react-native-paper';
 import { StyleSheet, Image, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = ({ homeHeader }) => {
-
-    const goBack = () => console.log('Went back');
-    const handleSearch = () => console.log('Searching');
-
+    const navigation = useNavigation();
+    const goBack = () => {
+        navigation.goBack();
+    };
+    const info = () => {
+        console.log('info');
+    };
 
     if (homeHeader) {
         return (
@@ -24,8 +28,8 @@ const Header = ({ homeHeader }) => {
     return (
         <Appbar.Header style={headerStyles.header}>
             <Appbar.BackAction onPress={goBack} color='white' />
-            <Appbar.Content title="Cantoral Ria App" titleStyle={headerStyles.content} />
-            <Appbar.Action icon="magnify" onPress={handleSearch} color='white' />
+            <Appbar.Content title="Nombre del canto" titleStyle={headerStyles.content} />
+            <Appbar.Action icon="information" onPress={info} color='white' />
         </Appbar.Header>
     );
 
